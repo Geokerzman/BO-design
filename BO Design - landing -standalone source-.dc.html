@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="alternate" hreflang="en" href="[URL]/" />
-<link rel="alternate" hreflang="de" href="[URL]/de" />
-<link rel="alternate" hreflang="x-default" href="[URL]/" />
+<link rel="alternate" hreflang="en" href="./" />
+<link rel="alternate" hreflang="de" href="de.html" />
+<link rel="alternate" hreflang="x-default" href="./" />
 <meta name="ext-resource-dependency" content="web/desk-g1.jpg" data-resource-id="desk_g1" />
 <meta name="ext-resource-dependency" content="web/desk-g2.jpg" data-resource-id="desk_g2" />
 <meta name="ext-resource-dependency" content="web/desk-g3.jpg" data-resource-id="desk_g3" />
@@ -88,7 +88,7 @@
       <a href="#work" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Work</a>
       <a href="#pricing" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Pricing</a>
       <a href="#about" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">About</a>
-      <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><a href="de.dc.html" style="color: #6B7280; font-weight: 400;">DE</a><span aria-hidden="true" style="width: 1px; height: 14px; background: #E5E7EB;"></span><span style="color: #111111; font-weight: 700;">EN</span></span>
+      <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><a href="de.html" style="color: #6B7280; font-weight: 400;">DE</a><span aria-hidden="true" style="width: 1px; height: 14px; background: #E5E7EB;"></span><span style="color: #111111; font-weight: 700;">EN</span></span>
       <a href="#contact" style="background: #3B82F6; color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 10px 16px; border-radius: 8px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #2563EB;">Get a quote</a>
       <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="Menu" style="display: {{ burgerDisplay }}; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px;">
         <span aria-hidden="true" style="display: block; width: 20px; height: 2px; border-radius: 2px; background: #111111;"></span>
@@ -426,7 +426,7 @@
           <div>
             <div style="display: flex; align-items: flex-start; gap: 12px;">
               <input id="f-consent" name="consent" type="checkbox" checked="{{ consent }}" onChange="{{ toggleConsent }}" aria-describedby="{{ consentDescribedBy }}" style="appearance: none; -webkit-appearance: none; flex: 0 0 auto; width: 18px; height: 18px; margin: 0; border: 2px solid {{ cbBorder }}; border-radius: 4px; background-color: {{ cbBg }}; background-image: {{ cbMark }}; background-repeat: no-repeat; background-position: center; background-size: 12px 12px; cursor: pointer;" />
-              <label for="f-consent" style="font-size: 14px; line-height: 1.5; color: #6B7280; cursor: pointer;">I have read the <a href="Datenschutz.dc.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Datenschutzerklärung</a> and agree that my data will be processed to answer my enquiry.</label>
+              <label for="f-consent" style="font-size: 14px; line-height: 1.5; color: #6B7280; cursor: pointer;">I have read the <a href="datenschutz.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Datenschutzerklärung</a> and agree that my data will be processed to answer my enquiry.</label>
             </div>
             <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}">
               <p id="consent-error" style="margin: 8px 0 0 30px; font-size: 14px; line-height: 1.5; color: #6B7280;">Please confirm this to continue.</p>
@@ -447,8 +447,8 @@
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px); display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; font-size: 14px; color: #6B7280;">
       <span style="color: #111111; font-weight: 700;">BO Design</span>
       <a href="mailto:{{ email }}">{{ email }}</a>
-      <a href="Impressum.dc.html">Impressum</a>
-      <a href="Datenschutz.dc.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
       <span style="margin-left: auto;">© 2026</span>
     </div>
   </footer>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="alternate" hreflang="en" href="[URL]/" />
-<link rel="alternate" hreflang="de" href="[URL]/de" />
-<link rel="alternate" hreflang="x-default" href="[URL]/" />
+<link rel="alternate" hreflang="en" href="./" />
+<link rel="alternate" hreflang="de" href="de.html" />
+<link rel="alternate" hreflang="x-default" href="./" />
 <script src="./support.js"></script>
 </head>
 <body>
@@ -31,23 +31,22 @@
   <div style="max-width: 1040px; margin: 0 auto; padding: 14px clamp(20px, 5vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
     <a href="#top" style="font-weight: 700; font-size: 16px; letter-spacing: -0.02em; color: #111111;">BO Design</a>
     <nav style="display: flex; align-items: center; gap: clamp(0px, 3vw, 28px);">
-      <a href="#work" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Work</a>
-      <a href="#pricing" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Pricing</a>
-      <a href="#about" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">About</a>
-      <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><a href="de.dc.html" style="color: #6B7280; font-weight: 400;">DE</a><span aria-hidden="true" style="width: 1px; height: 14px; background: #E5E7EB;"></span><span style="color: #111111; font-weight: 700;">EN</span></span>
-      <a href="#contact" style="background: #3B82F6; color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 10px 16px; border-radius: 8px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #2563EB;">Get a quote</a>
+      <a href="#work" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Arbeiten</a>
+      <a href="#pricing" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Preise</a>
+      <a href="#about" style="display: {{ linkDisplay }}; font-size: 15px; color: #111111;">Über mich</a>
+      <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><span style="color: #111111; font-weight: 700;">DE</span><span aria-hidden="true" style="width: 1px; height: 14px; background: #E5E7EB;"></span><a href="index.html" style="color: #6B7280; font-weight: 400;">EN</a></span>
+      <a href="#contact" style="background: #3B82F6; color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 10px 16px; border-radius: 8px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #2563EB;">Angebot anfragen</a>
       <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="Menu" style="display: {{ burgerDisplay }}; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px;">
         <span aria-hidden="true" style="display: block; width: 20px; height: 2px; border-radius: 2px; background: #111111;"></span>
         <span aria-hidden="true" style="display: block; width: 20px; height: 2px; border-radius: 2px; background: #111111;"></span>
       </button>
     </nav>
   </div>
-
   <div style="display: {{ burgerDisplay }}; overflow: hidden; max-height: {{ menuMax }}; opacity: {{ menuOpacity }}; transition: max-height 260ms ease, opacity 200ms ease; border-top: 1px solid {{ menuBorder }};">
     <div style="padding: 8px clamp(20px, 5vw, 32px) 16px; display: flex; flex-direction: column;">
-      <a href="#work" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #E5E7EB;">Work</a>
-      <a href="#pricing" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #E5E7EB;">Pricing</a>
-      <a href="#about" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center;">About</a>
+      <a href="#work" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #E5E7EB;">Arbeiten</a>
+      <a href="#pricing" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #E5E7EB;">Preise</a>
+      <a href="#about" onClick="{{ closeMenu }}" style="font-size: 17px; font-weight: 700; color: #111111; min-height: 52px; display: flex; align-items: center;">Über mich</a>
     </div>
   </div>
 </header>
@@ -56,28 +55,28 @@
 
   <section style="padding: clamp(48px, 9vw, 104px) 0 clamp(40px, 6vw, 72px);">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <p data-reveal="1" style="margin: 0 0 22px; font-size: 12px; font-weight: 700; color: #111111;">Amazon DE, EU and US marketplaces</p>
-      <h1 data-reveal="1" style="margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; font-size: clamp(36px, 7.5vw, 68px); max-width: 15ch;">Most listings lose the sale in the gallery.</h1>
-      <p data-reveal="1" style="margin: 24px 0 0; font-size: clamp(16px, 2.1vw, 19px); line-height: 1.6; color: #6B7280; max-width: 62ch;">Gallery images and A+ Content for Amazon sellers — designed by a UX designer who has spent five years working out why people click and why they don't.</p>
+      <p data-reveal="1" style="margin: 0 0 22px; font-size: 12px; font-weight: 700; color: #111111;">Amazon DE, EU und US Marktplätze</p>
+      <h1 data-reveal="1" style="margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; font-size: clamp(36px, 7.5vw, 68px); max-width: 15ch;">Der Verkauf entscheidet sich in der Galerie.</h1>
+      <p data-reveal="1" style="margin: 24px 0 0; font-size: clamp(16px, 2.1vw, 19px); line-height: 1.6; color: #6B7280; max-width: 62ch;">Galeriebilder und A+ Content für Amazon-Seller. Gestaltet von einem UX-Designer, der seit fünf Jahren daran arbeitet, warum Menschen klicken – und warum nicht.</p>
 
       <div data-reveal="1" style="margin: 32px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; font-size: 14px; color: #111111;">
-        <span>5 years in German product teams</span>
+        <span>5 Jahre in deutschen Produktteams</span>
         <span aria-hidden="true" style="width: 1px; height: 16px; background: #E5E7EB;"></span>
-        <span>English &amp; German</span>
+        <span>Deutsch &amp; Englisch</span>
         <span aria-hidden="true" style="width: 1px; height: 16px; background: #E5E7EB;"></span>
-        <span>2–7 days turnaround</span>
+        <span>2–7 Tage Lieferzeit</span>
       </div>
 
       <div data-reveal="1" style="margin: 36px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px;">
-        <a href="#contact" style="background: #3B82F6; color: #FFFFFF; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 10px; min-height: 52px; display: inline-flex; align-items: center; box-shadow: 0 6px 18px rgba(59,130,246,0.22);" style-hover="background: #2563EB;">Get a quote</a>
-        <a href="#work" style="font-size: 16px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; gap: 8px;">See the work <span aria-hidden="true">→</span></a>
+        <a href="#contact" style="background: #3B82F6; color: #FFFFFF; font-size: 16px; font-weight: 700; padding: 15px 26px; border-radius: 10px; min-height: 52px; display: inline-flex; align-items: center; box-shadow: 0 6px 18px rgba(59,130,246,0.22);" style-hover="background: #2563EB;">Angebot anfragen</a>
+        <a href="#work" style="font-size: 16px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; gap: 8px;">Arbeiten ansehen <span aria-hidden="true">→</span></a>
       </div>
 
       <div data-reveal="1" style="margin: clamp(48px, 8vw, 84px) 0 0;">
         <div style="display: inline-block; position: relative;">
-          <div style="font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-size: clamp(56px, 13vw, 116px); color: #3B82F6;">2–7 days</div>
+          <div style="font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-size: clamp(56px, 13vw, 116px); color: #3B82F6;">2–7 Tage</div>
         </div>
-        <div style="margin-top: 26px; font-size: 14px; color: #6B7280;">from brief to delivery</div>
+        <div style="margin-top: 26px; font-size: 14px; color: #6B7280;">vom Briefing bis zur Lieferung</div>
       </div>
     </div>
   </section>
@@ -86,18 +85,18 @@
 
   <section id="services" style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700; color: #111111; letter-spacing: 0;">Services:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700; color: #111111; letter-spacing: 0;">Leistungen:</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px;">
         <article data-reveal="1" style="border: 2px solid #3B82F6; border-radius: 12px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(17,17,17,0.05); padding: clamp(22px, 3.5vw, 32px);">
-          <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.6vw, 24px); font-weight: 700; letter-spacing: -0.02em;">Gallery images</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B7280;">The seven slots that decide whether someone scrolls or leaves. Hero shot, feature breakdowns, size and scale, lifestyle context, comparison. Built to Amazon's specs, readable at thumbnail size.</p>
+          <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.6vw, 24px); font-weight: 700; letter-spacing: -0.02em;">Galeriebilder</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Die sieben Slots, die entscheiden, ob jemand weiterscrollt oder abspringt. Hero-Shot, Feature-Erklärung, Größe und Maßstab, Lifestyle-Kontext, Vergleich. Nach Amazon-Vorgaben gebaut und schon als Thumbnail lesbar.</p>
         </article>
         <article data-reveal="1" style="border: 2px solid #3B82F6; border-radius: 12px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(17,17,17,0.05); padding: clamp(22px, 3.5vw, 32px);">
           <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.6vw, 24px); font-weight: 700; letter-spacing: -0.02em;">A+ Content</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B7280;">The section below the fold that closes the sale for considered purchases. Modular layouts, comparison tables, brand story, technical detail — structured so it answers objections in the order buyers raise them.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Der Bereich unterhalb der Galerie, der bei erklärungsbedürftigen Produkten den Kauf abschließt. Modulare Layouts, Vergleichstabellen, Markengeschichte, technische Details – aufgebaut in der Reihenfolge, in der Käufer ihre Einwände haben.</p>
         </article>
       </div>
-      <p data-reveal="1" style="margin: 24px 0 0; font-size: 16px; line-height: 1.6; color: #111111;">Most sellers need both. They are priced together for that reason.</p>
+      <p data-reveal="1" style="margin: 24px 0 0; font-size: 16px; line-height: 1.6; color: #111111;">Die meisten Seller brauchen beides. Deshalb sind sie zusammen günstiger.</p>
     </div>
   </section>
 
@@ -105,11 +104,11 @@
 
   <section style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 8px; font-size: 12px; font-weight: 700;">Every project includes:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 8px; font-size: 12px; font-weight: 700;">In jedem Projekt enthalten:</h2>
       <div style="display: flex; flex-direction: column;">
-        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Any language.</strong> <span style="color: #6B7280;">Layouts built for English and German first, but any target market. I handle the typography so translated copy doesn't break the design.</span></div>
-        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Any category.</strong> <span style="color: #6B7280;">Consumer electronics, furniture, beauty, tools, home. The research changes; the method doesn't.</span></div>
-        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Any number of products.</strong> <span style="color: #6B7280;">No cap on volume. Variations are priced separately because they are real design work, not a colour swap.</span></div>
+        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Jede Sprache.</strong> <span style="color: #6B7280;">Layouts zuerst für Deutsch und Englisch, aber jeder Zielmarkt ist möglich. Um die Typografie kümmere ich mich, damit übersetzte Texte das Layout nicht sprengen.</span></div>
+        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Jede Kategorie.</strong> <span style="color: #6B7280;">Elektronik, Möbel, Beauty, Werkzeug, Haushalt. Die Recherche ändert sich, die Methode nicht.</span></div>
+        <div data-reveal="1" style="border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; padding: 20px 0; font-size: 16px; line-height: 1.6;"><strong style="font-weight: 700;">Beliebig viele Produkte.</strong> <span style="color: #6B7280;">Keine Obergrenze. Varianten werden separat berechnet, weil sie echte Gestaltungsarbeit sind und kein Farbtausch.</span></div>
       </div>
     </div>
   </section>
@@ -118,7 +117,7 @@
 
   <section id="work" style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 36px; font-size: 12px; font-weight: 700;">Selected work:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 36px; font-size: 12px; font-weight: 700;">Ausgewählte Arbeiten:</h2>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: clamp(44px, 6vw, 68px);">
@@ -129,7 +128,7 @@
             <p style="margin: 8px 0 20px; font-size: 15px; line-height: 1.6; color: #6B7280; max-width: 62ch;">{{ c.note }}</p>
           </div>
           <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-            <div style="font-size: 12px; font-weight: 700; color: #111111;">Gallery images:</div>
+            <div style="font-size: 12px; font-weight: 700; color: #111111;">Galeriebilder:</div>
           </div>
           <div style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline-start: clamp(20px, 5vw, 32px); padding: 12px clamp(20px, 5vw, 32px); -webkit-overflow-scrolling: touch;">
             <sc-for list="{{ c.gallery }}" as="s" hint-placeholder-count="5">
@@ -153,7 +152,7 @@
     </div>
 
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <p data-reveal="1" style="margin: 28px 0 0; font-size: 13px; line-height: 1.6; color: #6B7280;">Concept work, produced independently. Not affiliated with or commissioned by the brands shown.</p>
+      <p data-reveal="1" style="margin: 28px 0 0; font-size: 13px; line-height: 1.6; color: #6B7280;">Eigenständig erstellte Konzeptarbeiten. Keine Verbindung zu den gezeigten Marken und nicht von diesen beauftragt.</p>
     </div>
   </section>
 
@@ -161,7 +160,7 @@
 
   <section style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 32px; font-size: 12px; font-weight: 700;">Process:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 32px; font-size: 12px; font-weight: 700;">Ablauf:</h2>
       <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 28px 24px;">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
           <li data-reveal="1">
@@ -178,61 +177,61 @@
 
   <section style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 20px; font-size: 12px; font-weight: 700;">Worked example:</h2>
-      <h3 data-reveal="1" style="margin: 0; font-size: clamp(22px, 3.2vw, 32px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; max-width: 26ch;">What a higher conversion rate is worth</h3>
-      <p data-reveal="1" style="margin: 16px 0 32px; font-size: 16px; line-height: 1.6; color: #6B7280; max-width: 68ch;">What a better listing is worth depends on your category, your price and your competition. The lever itself can still be calculated. Set the values yourself — the fields start on freely chosen example values, not on data from a client account.</p>
+      <h2 data-reveal="1" style="margin: 0 0 20px; font-size: 12px; font-weight: 700;">Beispielrechnung:</h2>
+      <h3 data-reveal="1" style="margin: 0; font-size: clamp(22px, 3.2vw, 32px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; max-width: 26ch;">Was eine höhere Conversion Rate wert ist</h3>
+      <p data-reveal="1" style="margin: 16px 0 32px; font-size: 16px; line-height: 1.6; color: #6B7280; max-width: 68ch;">Was ein besseres Listing wert ist, hängt von Kategorie, Preis und Wettbewerb ab. Rechnen lässt sich der Hebel trotzdem. Die Werte setzt du selbst — die Felder starten mit frei gewählten Beispielwerten, nicht mit Daten aus einem Kundenkonto.</p>
 
       <div data-reveal="1" style="border: 1px solid #E5E7EB; border-radius: 12px; padding: clamp(22px, 3.5vw, 34px); max-width: 720px; font-variant-numeric: tabular-nums;">
         <table style="width: 100%; border-collapse: collapse; text-align: left;">
-          <caption style="font-size: 12px; font-weight: 700; color: #111111; text-align: left; padding: 0 0 6px;">Your assumptions</caption>
+          <caption style="font-size: 12px; font-weight: 700; color: #111111; text-align: left; padding: 0 0 6px;">Deine Annahmen</caption>
           <tbody>
             <tr>
-              <th scope="row" style="font-weight: 400; padding: 10px 12px 10px 0; border-top: 1px solid #E5E7EB;"><label for="calc-sessions" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Sessions per month</label></th>
+              <th scope="row" style="font-weight: 400; padding: 10px 12px 10px 0; border-top: 1px solid #E5E7EB;"><label for="calc-sessions" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Sessions pro Monat</label></th>
               <td style="padding: 10px 0; border-top: 1px solid #E5E7EB; text-align: right;">
                 <input id="calc-sessions" type="text" inputMode="numeric" autoComplete="off" value="{{ calc.sessions }}" onChange="{{ calc.setSessions }}" aria-describedby="calc-sessions-help" style="width: 140px; max-width: 100%; font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; text-align: right; padding: 10px 12px; min-height: 44px; border: 1px solid #E5E7EB; border-radius: 8px; font-variant-numeric: tabular-nums;" />
-                <p id="calc-sessions-help" style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280; display: {{ calc.sessionsHelp }};">Enter a number above zero to see the calculation.</p>
+                <p id="calc-sessions-help" style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280; display: {{ calc.sessionsHelp }};">Trag eine Zahl über null ein, um die Rechnung zu sehen.</p>
               </td>
             </tr>
             <tr>
-              <th scope="row" style="font-weight: 400; padding: 10px 12px 10px 0; border-top: 1px solid #E5E7EB;"><label for="calc-aov" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Average order value</label></th>
+              <th scope="row" style="font-weight: 400; padding: 10px 12px 10px 0; border-top: 1px solid #E5E7EB;"><label for="calc-aov" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Ø Warenkorb</label></th>
               <td style="padding: 10px 0; border-top: 1px solid #E5E7EB; text-align: right;">
-                <span style="display: inline-flex; align-items: center; gap: 8px;"><span aria-hidden="true" style="font-size: 16px; color: #6B7280;">€</span><input id="calc-aov" type="text" inputMode="decimal" autoComplete="off" value="{{ calc.aov }}" onChange="{{ calc.setAov }}" aria-describedby="calc-aov-help" style="width: 110px; max-width: 100%; font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; text-align: right; padding: 10px 12px; min-height: 44px; border: 1px solid #E5E7EB; border-radius: 8px; font-variant-numeric: tabular-nums;" /></span>
-                <p id="calc-aov-help" style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280; display: {{ calc.aovHelp }};">Enter a number above zero to see the calculation.</p>
+                <span style="display: inline-flex; align-items: center; gap: 8px;"><input id="calc-aov" type="text" inputMode="decimal" autoComplete="off" value="{{ calc.aov }}" onChange="{{ calc.setAov }}" aria-describedby="calc-aov-help" style="width: 110px; max-width: 100%; font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; text-align: right; padding: 10px 12px; min-height: 44px; border: 1px solid #E5E7EB; border-radius: 8px; font-variant-numeric: tabular-nums;" /><span aria-hidden="true" style="font-size: 16px; color: #6B7280;">€</span></span>
+                <p id="calc-aov-help" style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280; display: {{ calc.aovHelp }};">Trag eine Zahl über null ein, um die Rechnung zu sehen.</p>
               </td>
             </tr>
             <tr>
-              <th scope="row" style="font-weight: 400; padding: 14px 12px 0 0; border-top: 1px solid #E5E7EB;"><label id="calc-cur-label" for="calc-cur" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Conversion rate, currently</label></th>
+              <th scope="row" style="font-weight: 400; padding: 14px 12px 0 0; border-top: 1px solid #E5E7EB;"><label id="calc-cur-label" for="calc-cur" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Conversion Rate, aktuell</label></th>
               <td style="padding: 14px 0 0; border-top: 1px solid #E5E7EB; text-align: right; font-size: 16px; color: #111111;">{{ calc.curLabel }}</td>
             </tr>
             <tr>
               <td colSpan="2" style="padding: 2px 0 14px;"><input id="calc-cur" type="range" min="0.5" max="30" step="0.5" value="{{ calc.cur }}" onChange="{{ calc.setCur }}" aria-labelledby="calc-cur-label" aria-valuetext="{{ calc.curText }}" style="width: 100%; height: 44px; accent-color: #3B82F6; cursor: pointer;" /></td>
             </tr>
             <tr>
-              <th scope="row" style="font-weight: 400; padding: 14px 12px 0 0; border-top: 1px solid #E5E7EB;"><label id="calc-scn-label" for="calc-scn" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Conversion rate, scenario</label></th>
+              <th scope="row" style="font-weight: 400; padding: 14px 12px 0 0; border-top: 1px solid #E5E7EB;"><label id="calc-scn-label" for="calc-scn" style="font-size: 16px; line-height: 1.5; color: #6B7280;">Conversion Rate, Szenario</label></th>
               <td style="padding: 14px 0 0; border-top: 1px solid #E5E7EB; text-align: right; font-size: 16px; color: #111111;">{{ calc.scnLabel }}</td>
             </tr>
             <tr>
               <td colSpan="2" style="padding: 2px 0 0;">
                 <input id="calc-scn" type="range" min="0.5" max="30" step="0.5" value="{{ calc.scn }}" onChange="{{ calc.setScn }}" aria-labelledby="calc-scn-label" aria-describedby="calc-scn-help" aria-valuetext="{{ calc.scnText }}" style="width: 100%; height: 44px; accent-color: #3B82F6; cursor: pointer;" />
-                <p id="calc-scn-help" style="margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280;">You set this figure yourself. It's an assumption to calculate with, not a forecast from me.</p>
+                <p id="calc-scn-help" style="margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #6B7280;">Diesen Wert setzt du selbst. Er ist eine Annahme zum Rechnen, keine Prognose von mir.</p>
               </td>
             </tr>
           </tbody>
         </table>
 
         <table style="width: 100%; border-collapse: collapse; text-align: left; margin-top: 34px;">
-          <caption style="font-size: 12px; font-weight: 700; color: #111111; text-align: left; padding: 0 0 6px;">Calculation</caption>
+          <caption style="font-size: 12px; font-weight: 700; color: #111111; text-align: left; padding: 0 0 6px;">Rechnung</caption>
           <tbody>
             <tr role="row" style="display: {{ calc.rowD }};">
-              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 400; font-size: 16px; line-height: 1.5; color: #6B7280; text-align: left; padding: {{ calc.thPad }}; border-top: 1px solid #E5E7EB; vertical-align: top;">Currently</th>
+              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 400; font-size: 16px; line-height: 1.5; color: #6B7280; text-align: left; padding: {{ calc.thPad }}; border-top: 1px solid #E5E7EB; vertical-align: top;">Aktuell</th>
               <td role="cell" style="display: {{ calc.cellD }}; font-size: clamp(14px, 3.4vw, 16px); line-height: 1.5; color: #111111; text-align: {{ calc.cellAlign }}; padding: {{ calc.tdPad }}; border-top: {{ calc.tdBorder }};"><span style="white-space: nowrap;">{{ calc.curExpr }}</span> <span style="white-space: nowrap;">{{ calc.curResult }}</span> <span style="color: #6B7280;">{{ calc.curUnit }}</span></td>
             </tr>
             <tr role="row" style="display: {{ calc.rowD }};">
-              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 400; font-size: 16px; line-height: 1.5; color: #6B7280; text-align: left; padding: {{ calc.thPad }}; border-top: 1px solid #E5E7EB; vertical-align: top;">Scenario</th>
+              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 400; font-size: 16px; line-height: 1.5; color: #6B7280; text-align: left; padding: {{ calc.thPad }}; border-top: 1px solid #E5E7EB; vertical-align: top;">Szenario</th>
               <td role="cell" style="display: {{ calc.cellD }}; font-size: clamp(14px, 3.4vw, 16px); line-height: 1.5; color: #111111; text-align: {{ calc.cellAlign }}; padding: {{ calc.tdPad }}; border-top: {{ calc.tdBorder }};"><span style="white-space: nowrap;">{{ calc.scnExpr }}</span> <span style="white-space: nowrap;">{{ calc.scnResult }}</span> <span style="color: #6B7280;">{{ calc.scnUnit }}</span></td>
             </tr>
             <tr role="row" style="display: {{ calc.rowD }};">
-              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 700; font-size: 16px; line-height: 1.5; color: #111111; text-align: left; padding: {{ calc.diffThPad }}; border-top: 1px solid #111111; vertical-align: top;">Difference</th>
+              <th scope="row" role="rowheader" style="display: {{ calc.cellD }}; font-weight: 700; font-size: 16px; line-height: 1.5; color: #111111; text-align: left; padding: {{ calc.diffThPad }}; border-top: 1px solid #111111; vertical-align: top;">Differenz</th>
               <td role="cell" style="display: {{ calc.cellD }}; font-size: clamp(14px, 3.4vw, 16px); line-height: 1.5; color: #111111; text-align: {{ calc.cellAlign }}; padding: {{ calc.diffTdPad }}; border-top: {{ calc.diffTdBorder }};"><span style="white-space: nowrap;">{{ calc.diffMonth }}</span> <span style="color: #6B7280;">{{ calc.diffSep }}</span> <span style="white-space: nowrap;">{{ calc.diffYear }}</span></td>
             </tr>
           </tbody>
@@ -241,13 +240,13 @@
         <p aria-live="polite" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: -1px;">{{ calc.live }}</p>
 
         <div style="margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline;">
-          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B7280;">Everything is calculated in your browser. No values are sent, saved or tracked.</p>
-          <button type="button" onClick="{{ calc.reset }}" style="background: none; border: 0; padding: 0; font-family: inherit; font-size: 14px; color: #3B82F6; text-decoration: underline; cursor: pointer; min-height: 44px;" style-hover="color: #1D4ED8;">Reset to the example values</button>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B7280;">Alles wird in deinem Browser berechnet. Es werden keine Werte gesendet, gespeichert oder getrackt.</p>
+          <button type="button" onClick="{{ calc.reset }}" style="background: none; border: 0; padding: 0; font-family: inherit; font-size: 14px; color: #3B82F6; text-decoration: underline; cursor: pointer; min-height: 44px;" style-hover="color: #1D4ED8;">Auf die Beispielwerte zurücksetzen</button>
         </div>
 
-        <p style="margin: 26px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">How big a step is realistic depends on category, price, reviews and traffic quality — not on design alone. On the main image the options are limited by Amazon's image guidelines; gallery images from the second slot onwards and A+ Content are the part design actually moves. And if the ad budget stays the same, a higher conversion rate also lowers the cost per order.</p>
-        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Calculation example based on values you choose yourself. No client data, no guarantee of any particular outcome.</p>
-        <p style="margin: 22px 0 0; font-size: 16px; line-height: 1.6;"><a href="#contact">Want to go through your actual listing? Get in touch.</a></p>
+        <p style="margin: 26px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Wie groß ein realistischer Schritt ist, entscheiden Kategorie, Preis, Bewertungen und Traffic-Qualität — nicht das Design allein. Beim Hauptbild sind die Möglichkeiten durch Amazons Bildrichtlinien begrenzt; Galeriebilder ab Position zwei und A+ Content sind der Teil, den Gestaltung wirklich bewegt. Und bleibt das Werbebudget gleich, sinken mit steigender Conversion Rate auch die Kosten pro Bestellung.</p>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Rechenbeispiel mit selbst gewählten Werten. Keine Kundendaten, keine Zusicherung eines bestimmten Ergebnisses.</p>
+        <p style="margin: 22px 0 0; font-size: 16px; line-height: 1.6;"><a href="#contact">Du willst dein Listing konkret durchgehen? Schreib mir.</a></p>
       </div>
     </div>
   </section>
@@ -256,25 +255,25 @@
 
   <section id="pricing" style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700;">Pricing:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700;">Preise:</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; align-items: start;">
         <article data-reveal="1" style="border: 2px solid #3B82F6; border-radius: 12px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(17,17,17,0.05); padding: clamp(22px, 3.2vw, 30px);">
-          <h3 style="margin: 0 0 18px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em;">Gallery images</h3>
-          <div style="font-size: 13px; color: #6B7280;">from</div>
-          <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 26px;">€</span><span style="font-size: 48px; line-height: 1;">500</span></div>
+          <h3 style="margin: 0 0 18px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em;">Galeriebilder</h3>
+          <div style="font-size: 13px; color: #6B7280;">ab</div>
+          <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 48px; line-height: 1;">500</span><span style="font-size: 26px;">&nbsp;€</span></div>
         </article>
         <article data-reveal="1" style="border: 2px solid #3B82F6; border-radius: 12px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(17,17,17,0.05); padding: clamp(22px, 3.2vw, 30px);">
           <h3 style="margin: 0 0 18px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em;">A+ Content</h3>
-          <div style="font-size: 13px; color: #6B7280;">from</div>
-          <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 26px;">€</span><span style="font-size: 48px; line-height: 1;">500</span></div>
+          <div style="font-size: 13px; color: #6B7280;">ab</div>
+          <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 48px; line-height: 1;">500</span><span style="font-size: 26px;">&nbsp;€</span></div>
         </article>
         <article data-reveal="1" style="border: 2px solid #3B82F6; border-radius: 12px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(17,17,17,0.05); padding: clamp(22px, 3.2vw, 30px);">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px;">
-            <h3 style="margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -0.01em;">Both together</h3>
-            <span style="background: #3B82F6; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 5px 9px; border-radius: 999px;">Most sellers choose this</span>
+            <h3 style="margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -0.01em;">Beides zusammen</h3>
+            <span style="background: #3B82F6; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 5px 9px; border-radius: 999px;">Die meisten entscheiden sich dafür</span>
           </div>
           <div style="display: inline-block; position: relative;">
-            <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 26px;">€</span><span style="font-size: 48px; line-height: 1;">900</span></div>
+            <div style="display: flex; align-items: baseline; gap: 4px; color: #3B82F6; font-weight: 700; letter-spacing: -0.03em;"><span style="font-size: 48px; line-height: 1;">900</span><span style="font-size: 26px;">&nbsp;€</span></div>
             <svg data-scribble="price" width="100%" height="22" viewBox="0 0 200 22" fill="none" aria-hidden="true" style="position: absolute; left: -4%; bottom: -14px; width: 108%; overflow: visible;">
               <path d="M4 12 C42 4 82 17 118 8 C144 2 172 12 196 5" stroke="#3B82F6" stroke-width="3.4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="{{ priceDash }}" style="transition: stroke-dashoffset 900ms ease-out;"></path>
               <path d="M20 19 C62 13 104 21 146 15" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" opacity="0.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="{{ priceDash }}" style="transition: stroke-dashoffset 900ms 160ms ease-out;"></path>
@@ -283,8 +282,8 @@
           </div>
         </article>
       </div>
-      <p data-reveal="1" style="margin: 32px 0 0; font-size: 15px; line-height: 1.6; color: #6B7280; max-width: 68ch;">Final price depends on the number of products and variations — colours, models, sizes and similar variants all affect it, and we can discuss how yours are best handled. You get a fixed quote before work starts, never an hourly estimate.</p>
-      <p data-reveal="1" style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #6B7280;">As a small business under §19 UStG, no VAT is charged.</p>
+      <p data-reveal="1" style="margin: 32px 0 0; font-size: 15px; line-height: 1.6; color: #6B7280; max-width: 68ch;">Der Endpreis richtet sich nach Anzahl der Produkte und Varianten – Farben, Modelle, Größen und ähnliche Varianten wirken sich alle darauf aus, und wir können besprechen, wie Ihre am besten umgesetzt werden. Sie bekommen einen Festpreis, bevor die Arbeit beginnt – keine Stundenschätzung.</p>
+      <p data-reveal="1" style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #6B7280;">Als Kleinunternehmer gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
     </div>
   </section>
 
@@ -292,14 +291,14 @@
 
   <section id="about" style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700;">Who you're working with:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 28px; font-size: 12px; font-weight: 700;">Mit wem Sie arbeiten:</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 32px; align-items: start;">
         <div data-reveal="1" style="max-width: 62ch;">
-          <p style="margin: 0; font-size: 16px; line-height: 1.6;">I'm Boris — a UX/UI designer with five years in German product teams, working across both B2B and B2C. Most of that time has been spent on the same question your listing is asking: why does someone buy here and leave there.</p>
-          <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">That background is the difference between an image that looks good and an image that sells. Layout, hierarchy, what a person reads first on a phone at thumbnail size — that's the actual job, and it's the part most listing designers skip.</p>
-          <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">We work in English and German, whichever suits you.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6;">Ich bin Boris – UX/UI-Designer mit fünf Jahren in deutschen Produktteams, im B2B wie im B2C. Die meiste Zeit davon ging es um genau die Frage, die auch Ihr Listing stellt: Warum kauft jemand hier und springt dort ab.</p>
+          <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Dieser Hintergrund ist der Unterschied zwischen einem Bild, das gut aussieht, und einem Bild, das verkauft. Aufbau, Hierarchie, was jemand am Handy in Thumbnail-Größe zuerst liest – das ist die eigentliche Arbeit, und genau die überspringen die meisten Listing-Designer.</p>
+          <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Wir arbeiten auf Deutsch oder Englisch, ganz wie es Ihnen lieber ist.</p>
           <div style="display: inline-block; position: relative; margin-top: 28px;">
-            <span style="font-size: clamp(22px, 3.2vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: #3B82F6;">Creativity &amp; hard work</span>
+            <span style="font-size: clamp(22px, 3.2vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: #3B82F6;">Kreativität &amp; harte Arbeit</span>
             <svg data-scribble="about" width="100%" height="22" viewBox="0 0 300 22" fill="none" aria-hidden="true" style="position: absolute; left: -3%; bottom: -16px; width: 106%; overflow: visible;">
               <path d="M6 12 C60 4 120 17 176 8 C214 3 256 14 294 6" stroke="#3B82F6" stroke-width="3.4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="{{ aboutDash }}" style="transition: stroke-dashoffset 900ms ease-out;"></path>
               <path d="M28 19 C86 12 140 21 200 14" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" opacity="0.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="{{ aboutDash }}" style="transition: stroke-dashoffset 900ms 160ms ease-out;"></path>
@@ -318,7 +317,7 @@
 
   <section style="padding: clamp(56px, 9vw, 96px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0 0 8px; font-size: 12px; font-weight: 700;">Questions:</h2>
+      <h2 data-reveal="1" style="margin: 0 0 8px; font-size: 12px; font-weight: 700;">Fragen:</h2>
       <div style="display: flex; flex-direction: column; border-bottom: 1px solid #E5E7EB;">
         <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
           <div data-reveal="1" style="border-top: 1px solid #E5E7EB;">
@@ -339,13 +338,13 @@
 
   <section id="contact" style="padding: clamp(56px, 9vw, 104px) 0;">
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px);">
-      <h2 data-reveal="1" style="margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; font-size: clamp(28px, 5vw, 44px); max-width: 22ch;">Send me a listing you're unhappy with.</h2>
-      <p data-reveal="1" style="margin: 16px 0 40px; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; color: #6B7280;">I'll tell you what I'd change before you commit to anything.</p>
+      <h2 data-reveal="1" style="margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; font-size: clamp(28px, 5vw, 44px); max-width: 22ch;">Schicken Sie mir ein Listing, mit dem Sie unzufrieden sind.</h2>
+      <p data-reveal="1" style="margin: 16px 0 40px; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; color: #6B7280;">Ich sage Ihnen, was ich ändern würde – bevor Sie sich zu irgendetwas verpflichten.</p>
 
       <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
         <div role="status" style="border: 2px solid #3B82F6; border-radius: 12px; padding: clamp(24px, 4vw, 36px); max-width: 560px; box-shadow: 0 10px 24px rgba(17,17,17,0.05);">
-          <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Thanks — that's with me.</div>
-          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">I read every message myself and reply within one working day. If it's urgent, write to {{ email }} directly.</p>
+          <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">Danke, Ihre Anfrage ist angekommen.</div>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #6B7280;">Ich melde mich innerhalb eines Werktags. Wenn es dringend ist, schreiben Sie direkt an {{ email }}.</p>
         </div>
       </sc-if>
 
@@ -357,31 +356,31 @@
             <sc-if value="{{ err.name }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #3B82F6;">{{ err.name }}</span></sc-if>
           </div>
           <div style="display: flex; flex-direction: column; gap: 7px;">
-            <label for="f-email" style="font-size: 13px; font-weight: 700;">Email</label>
+            <label for="f-email" style="font-size: 13px; font-weight: 700;">E-Mail</label>
             <input id="f-email" name="email" type="email" value="{{ form.email }}" onChange="{{ setEmail }}" aria-invalid="{{ inv.email }}" style="font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; padding: 13px 14px; min-height: 50px; border: 1px solid {{ bd.email }}; border-radius: 8px;" />
             <sc-if value="{{ err.email }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #3B82F6;">{{ err.email }}</span></sc-if>
           </div>
           <div style="display: flex; flex-direction: column; gap: 7px;">
-            <label for="f-listing" style="font-size: 13px; font-weight: 700;">Listing link or ASIN</label>
-            <input id="f-listing" name="listing" type="text" value="{{ form.listing }}" onChange="{{ setListing }}" placeholder="amazon.de/dp/… or B0…" style="font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; padding: 13px 14px; min-height: 50px; border: 1px solid #E5E7EB; border-radius: 8px;" />
+            <label for="f-listing" style="font-size: 13px; font-weight: 700;">Listing-Link oder ASIN</label>
+            <input id="f-listing" name="listing" type="text" value="{{ form.listing }}" onChange="{{ setListing }}" placeholder="amazon.de/dp/… oder B0…" style="font-family: inherit; font-size: 16px; color: #111111; background: #FFFFFF; padding: 13px 14px; min-height: 50px; border: 1px solid #E5E7EB; border-radius: 8px;" />
           </div>
           <div style="display: flex; flex-direction: column; gap: 7px;">
-            <label for="f-message" style="font-size: 13px; font-weight: 700;">Message</label>
+            <label for="f-message" style="font-size: 13px; font-weight: 700;">Nachricht</label>
             <textarea id="f-message" name="message" rows="5" value="{{ form.message }}" onChange="{{ setMessage }}" aria-invalid="{{ inv.message }}" style="font-family: inherit; font-size: 16px; line-height: 1.55; color: #111111; background: #FFFFFF; padding: 13px 14px; border: 1px solid {{ bd.message }}; border-radius: 8px; resize: vertical;"></textarea>
             <sc-if value="{{ err.message }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #3B82F6;">{{ err.message }}</span></sc-if>
           </div>
           <div>
             <div style="display: flex; align-items: flex-start; gap: 12px;">
               <input id="f-consent" name="consent" type="checkbox" checked="{{ consent }}" onChange="{{ toggleConsent }}" aria-describedby="{{ consentDescribedBy }}" style="appearance: none; -webkit-appearance: none; flex: 0 0 auto; width: 18px; height: 18px; margin: 0; border: 2px solid {{ cbBorder }}; border-radius: 4px; background-color: {{ cbBg }}; background-image: {{ cbMark }}; background-repeat: no-repeat; background-position: center; background-size: 12px 12px; cursor: pointer;" />
-              <label for="f-consent" style="font-size: 14px; line-height: 1.5; color: #6B7280; cursor: pointer;">I have read the <a href="Datenschutz.dc.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Datenschutzerklärung</a> and agree that my data will be processed to answer my enquiry.</label>
+              <label for="f-consent" style="font-size: 14px; line-height: 1.5; color: #6B7280; cursor: pointer;">Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.</label>
             </div>
             <sc-if value="{{ consentError }}" hint-placeholder-val="{{ false }}">
-              <p id="consent-error" style="margin: 8px 0 0 30px; font-size: 14px; line-height: 1.5; color: #6B7280;">Please confirm this to continue.</p>
+              <p id="consent-error" style="margin: 8px 0 0 30px; font-size: 14px; line-height: 1.5; color: #6B7280;">Bitte bestätigen Sie dies, um fortzufahren.</p>
             </sc-if>
           </div>
           <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <button type="submit" disabled="{{ sendDisabled }}" style="background: #3B82F6; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; border: 0; padding: 15px 30px; border-radius: 10px; min-height: 52px; cursor: {{ sendCursor }}; opacity: {{ sendOpacity }}; box-shadow: 0 6px 18px rgba(59,130,246,0.22);">Send</button>
-            <span style="font-size: 15px; color: #6B7280;">or write to <a href="mailto:{{ email }}">{{ email }}</a></span>
+            <button type="submit" disabled="{{ sendDisabled }}" style="background: #3B82F6; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; border: 0; padding: 15px 30px; border-radius: 10px; min-height: 52px; cursor: {{ sendCursor }}; opacity: {{ sendOpacity }}; box-shadow: 0 6px 18px rgba(59,130,246,0.22);">Senden</button>
+            <span style="font-size: 15px; color: #6B7280;">oder schreiben Sie an <a href="mailto:{{ email }}">{{ email }}</a></span>
           </div>
         </form>
       </sc-if>
@@ -394,8 +393,8 @@
     <div style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px); display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; font-size: 14px; color: #6B7280;">
       <span style="color: #111111; font-weight: 700;">BO Design</span>
       <a href="mailto:{{ email }}">{{ email }}</a>
-      <a href="Impressum.dc.html">Impressum</a>
-      <a href="Datenschutz.dc.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
       <span style="margin-left: auto;">© 2026</span>
     </div>
   </footer>
@@ -408,7 +407,7 @@ class Component extends DCLogic {
     scrolled: false,
     narrow: false,
     menu: false,
-    calc: { sessions: "1,000", aov: "45", cur: 9, scn: 11 },
+    calc: { sessions: "1.000", aov: "45", cur: 9, scn: 11 },
     liveTick: 0,
     open: null,
     heroIn: false,
@@ -422,43 +421,43 @@ class Component extends DCLogic {
   };
 
   faqData = [
-    ["How fast is this really?", "Two to seven days for a complete set, depending on how many products and how quickly feedback comes back."],
-    ["What do you need from me?", "The listing link or ASIN, your product photos, and the specs. If your photography is weak, tell me early — it changes the approach."],
-    ["Do you write the copy too?", "Yes. The text on the images is part of the design, not an afterthought, and I write it in English or German."],
-    ["What about variations?", "Colours, models, sizes and similar variants all affect the price and are quoted per variation — tell me what you have and we can discuss how best to handle them. Recolouring is the smallest part of it — layout, scaling and translated text all have to be reworked."],
+    ["Wie schnell geht das wirklich?", "Zwei bis sieben Tage für ein komplettes Set, je nach Anzahl der Produkte und wie schnell Ihr Feedback kommt."],
+    ["Was brauchen Sie von mir?", "Den Listing-Link oder die ASIN, Ihre Produktfotos und die technischen Daten. Wenn Ihre Fotos schwach sind, sagen Sie es früh – das ändert die Herangehensweise."],
+    ["Schreiben Sie auch die Texte?", "Ja. Der Text auf den Bildern ist Teil der Gestaltung, kein Nachgedanke. Auf Deutsch oder Englisch."],
+    ["Und Varianten?", "Farben, Modelle, Größen und ähnliche Varianten wirken sich auf den Preis aus und werden pro Variante berechnet – sagen Sie mir, was Sie haben, und wir besprechen, wie es am besten läuft. Das Umfärben ist der kleinste Teil – Layout, Skalierung und übersetzter Text müssen jedes Mal mit."],
   ];
 
   caseData = [
     {
-      title: "Height-adjustable desk",
-      note: "Full German-language gallery set. Scenario-led structure: work, study, gaming.",
+      title: "Höhenverstellbarer Schreibtisch",
+      note: "Komplettes Galerie-Set auf Deutsch. Aufgebaut nach Szenarien: Arbeit, Studium, Gaming.",
       g: ["desk-g1", "desk-g2", "desk-g3", "desk-g4", "desk-g5", "desk-g6", "desk-g7", "desk-g8", "desk-g9"],
       a: ["desk-a1", "desk-a2", "desk-a3", "desk-a4", "desk-a5", "desk-a6"],
-      alt: "Gallery image from the height-adjustable desk set",
-      altA: "A+ Content module from the height-adjustable desk set",
+      alt: "Galeriebild aus dem Set für den höhenverstellbaren Schreibtisch",
+      altA: "A+ Content Modul aus dem Set für den höhenverstellbaren Schreibtisch",
     },
     {
-      title: "Premium fragrance",
-      note: "Gallery concept for a category where the image has to carry the entire product experience.",
+      title: "Premium-Duft",
+      note: "Galerie-Konzept für eine Kategorie, in der das Bild das gesamte Produkterlebnis tragen muss.",
       g: ["fr-g1", "fr-g2", "fr-g3", "fr-g4", "fr-g5", "fr-g6", "fr-g7", "fr-g8", "fr-g9"],
       a: ["fr-a1", "fr-a2", "fr-a3", "fr-a4", "fr-a5", "fr-a6"],
-      alt: "Gallery image from the premium fragrance concept set",
-      altA: "A+ Content module from the premium fragrance concept set",
+      alt: "Galeriebild aus dem Premium-Duft-Konzept",
+      altA: "A+ Content Modul aus dem Premium-Duft-Konzept",
     },
     {
-      title: "2-in-1 laptop",
-      note: "Bilingual set for a technical product with a feature list that had to stay scannable.",
+      title: "2-in-1-Notebook",
+      note: "Zweisprachiges Set für ein technisches Produkt, dessen Feature-Liste scanbar bleiben musste.",
       g: ["sp-g1", "sp-g2", "sp-g3", "sp-g4", "sp-g5", "sp-g6", "sp-g7", "sp-g8", "sp-g9"],
       a: ["sp-a1", "sp-a2", "sp-a3", "sp-a4", "sp-a5", "sp-a6"],
-      alt: "Gallery image from the 2-in-1 laptop set",
-      altA: "A+ Content module from the 2-in-1 laptop set",
+      alt: "Galeriebild aus dem 2-in-1-Notebook-Set",
+      altA: "A+ Content Modul aus dem 2-in-1-Notebook-Set",
     },
   ];
 
   steps = [
-    ["1", "You send the product.", "Listing link, photos, specs, anything you already have. If you'd rather talk it through, we can get on a call — and if you're in my area, a personal meeting is possible too."],
-    ["2", "First result in days.", "Complete set, not teasers."],
-    ["3", "One round of changes included.", "Further sets of adjustments are quoted separately."],
+    ["1", "Sie schicken mir das Produkt.", "Listing-Link, Fotos, Datenblatt – alles, was Sie schon haben. Wenn Sie es lieber besprechen möchten, können wir telefonieren – und wenn Sie in meiner Nähe sind, ist auch ein persönliches Treffen möglich."],
+    ["2", "Erstes Ergebnis in wenigen Tagen.", "Das komplette Set, keine Häppchen."],
+    ["3", "Eine Korrekturrunde ist enthalten.", "Weitere Anpassungsrunden werden separat angeboten."],
   ];
 
   componentDidMount() {
@@ -569,10 +568,10 @@ class Component extends DCLogic {
     const f = this.state.form;
     const e = {};
     if (!this.state.touched) return e;
-    if (!f.name.trim()) e.name = "Add your name so I know who I'm replying to.";
-    if (!f.email.trim()) e.email = "Add an email address — that's how I answer.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.trim())) e.email = "That address is missing something. Check for a typo, e.g. name@company.de";
-    if (f.message.trim().length < 10) e.message = "Tell me a little about the product — one or two sentences is enough.";
+    if (!f.name.trim()) e.name = "Bitte geben Sie Ihren Namen an, damit ich weiß, wem ich antworte.";
+    if (!f.email.trim()) e.email = "Bitte geben Sie eine E-Mail-Adresse an – darüber antworte ich.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.trim())) e.email = "Bei dieser Adresse fehlt etwas. Bitte prüfen Sie sie, z. B. name@firma.de";
+    if (f.message.trim().length < 10) e.message = "Erzählen Sie mir kurz vom Produkt – ein oder zwei Sätze genügen.";
     return e;
   }
 
@@ -657,8 +656,8 @@ class Component extends DCLogic {
     const cases = this.caseData.map((c) => ({
       title: c.title,
       note: c.note,
-      gallery: c.g.map((n, i) => ({ src: "assets/" + n + ".jpg", alt: c.alt + " (" + (i + 1) + " of " + c.g.length + ")", w: "clamp(220px, 62vw, 320px)" })),
-      aplus: c.a.map((n, i) => ({ src: "assets/" + n + ".jpg", alt: c.altA + " (" + (i + 1) + " of " + c.a.length + ")", w: "clamp(300px, 84vw, 520px)" })),
+      gallery: c.g.map((n, i) => ({ src: "assets/" + n + ".jpg", alt: c.alt + " (" + (i + 1) + " von " + c.g.length + ")", w: "clamp(220px, 62vw, 320px)" })),
+      aplus: c.a.map((n, i) => ({ src: "assets/" + n + ".jpg", alt: c.altA + " (" + (i + 1) + " von " + c.a.length + ")", w: "clamp(300px, 84vw, 520px)" })),
     }));
 
     return {
