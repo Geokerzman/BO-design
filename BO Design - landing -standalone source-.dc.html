@@ -61,7 +61,8 @@
     <rect x="150" y="450" width="330" height="70" rx="35" fill="#3B82F6"/>
   </svg>
 </template>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>window.boRecaptchaReady = function () { window.dispatchEvent(new Event("bo-recaptcha-ready")); };</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=boRecaptchaReady&amp;render=explicit" async defer></script>
 </head>
 <body>
 <x-dc>
@@ -434,7 +435,7 @@
             </sc-if>
           </div>
           <div>
-            <div class="g-recaptcha" data-sitekey="6Lfk0MUtAAAAALrzOhu_KxbBvIYVLwd59qk8k6rw"></div>
+            <div id="f-recaptcha"></div>
             <sc-if value="{{ captchaError }}" hint-placeholder-val="{{ false }}">
               <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: #B42318;">Please confirm that you are not a robot.</p>
             </sc-if>
@@ -537,6 +538,10 @@ class Component extends DCLogic {
     window.addEventListener("resize", this.onScroll);
     this.onScroll();
 
+    this.onCaptchaReady = () => this.mountCaptcha();
+    window.addEventListener("bo-recaptcha-ready", this.onCaptchaReady);
+    this.mountCaptcha();
+
     if (this.isDE()) this.setState({ calc: this.calcDefaults() });
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -575,6 +580,23 @@ class Component extends DCLogic {
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll);
     window.removeEventListener("resize", this.onScroll);
+    window.removeEventListener("bo-recaptcha-ready", this.onCaptchaReady);
+  }
+
+  mountCaptcha() {
+    if (this._captchaWidgetId !== undefined || !window.grecaptcha || typeof window.grecaptcha.render !== "function") return;
+    const mount = document.getElementById("f-recaptcha");
+    if (!mount) return;
+    try {
+      this._captchaWidgetId = window.grecaptcha.render(mount, {
+        sitekey: "6Lfk0MUtAAAAALrzOhu_KxbBvIYVLwd59qk8k6rw",
+        callback: () => this.setState({ captchaError: false }),
+        "expired-callback": () => this.setState({ captchaError: true }),
+        "error-callback": () => this.setState({ captchaError: true })
+      });
+    } catch (error) {
+      console.error("reCAPTCHA render failed:", error);
+    }
   }
 
   assetUrl(n) {
@@ -681,7 +703,7 @@ class Component extends DCLogic {
       .then(() => this.setState({ sent: true, sending: false }))
       .catch((error) => {
         console.error("EmailJS send failed:", error);
-        if (window.grecaptcha) window.grecaptcha.reset();
+        if (window.grecaptcha && this._captchaWidgetId !== undefined) window.grecaptcha.reset(this._captchaWidgetId);
         this.setState({
           sending: false,
           sendError: "The message could not be sent. Please try again or email me directly."
@@ -822,7 +844,9 @@ class Component extends DCLogic {
       onSubmit: (e) => {
         e.preventDefault();
         if (!this.state.consent) { this.setState({ consentError: true }); return; }
-        const captchaToken = window.grecaptcha ? window.grecaptcha.getResponse() : "";
+        const captchaToken = window.grecaptcha && this._captchaWidgetId !== undefined
+          ? window.grecaptcha.getResponse(this._captchaWidgetId)
+          : "";
         if (!captchaToken) { this.setState({ captchaError: true }); return; }
         this.setState({ touched: true }, () => {
           if (Object.keys(this.errors()).length === 0) this.sendEmail(captchaToken);
