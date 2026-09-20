@@ -61,6 +61,7 @@
     <rect x="150" y="450" width="330" height="70" rx="35" fill="#3B82F6"/>
   </svg>
 </template>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <x-dc>
@@ -432,10 +433,19 @@
               <p id="consent-error" style="margin: 8px 0 0 30px; font-size: 14px; line-height: 1.5; color: #6B7280;">Please confirm this to continue.</p>
             </sc-if>
           </div>
+          <div>
+            <div class="g-recaptcha" data-sitekey="6Lfk0MUtAAAAALrzOhu_KxbBvIYVLwd59qk8k6rw"></div>
+            <sc-if value="{{ captchaError }}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: #B42318;">Please confirm that you are not a robot.</p>
+            </sc-if>
+          </div>
           <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <button type="submit" disabled="{{ sendDisabled }}" style="background: #3B82F6; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; border: 0; padding: 15px 30px; border-radius: 10px; min-height: 52px; cursor: {{ sendCursor }}; opacity: {{ sendOpacity }}; box-shadow: 0 6px 18px rgba(59,130,246,0.22);">Send</button>
+            <button type="submit" disabled="{{ sendDisabled }}" aria-busy="{{ sending }}" style="background: #3B82F6; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; border: 0; padding: 15px 30px; border-radius: 10px; min-height: 52px; cursor: {{ sendCursor }}; opacity: {{ sendOpacity }}; box-shadow: 0 6px 18px rgba(59,130,246,0.22);">{{ sendLabel }}</button>
             <span style="font-size: 15px; color: #6B7280;">or write to <a href="mailto:{{ email }}">{{ email }}</a></span>
           </div>
+          <sc-if value="{{ sendError }}" hint-placeholder-val="{{ false }}">
+            <p role="alert" style="margin: -8px 0 0; font-size: 14px; line-height: 1.5; color: #B42318;">{{ sendError }}</p>
+          </sc-if>
         </form>
       </sc-if>
     </div>
@@ -468,9 +478,12 @@ class Component extends DCLogic {
     priceIn: false,
     aboutIn: false,
     sent: false,
+    sending: false,
+    sendError: "",
     touched: false,
     consent: false,
     consentError: false,
+    captchaError: false,
     form: { name: "", email: "", listing: "", message: "" },
   };
 
@@ -634,6 +647,48 @@ class Component extends DCLogic {
     return e;
   }
 
+  sendEmail(captchaToken) {
+    if (this.state.sending) return;
+    const f = this.state.form;
+    this.setState({ sending: true, sendError: "" });
+
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: "service_841vy8p",
+        template_id: "template_ge66vtl",
+        user_id: "t67OkNn-rGvemP9L8",
+        template_params: {
+          name: f.name.trim(),
+          email: f.email.trim(),
+          listing: f.listing.trim(),
+          message: f.message.trim(),
+          user_name: f.name.trim(),
+          user_email: f.email.trim(),
+          reply_to: f.email.trim(),
+          "g-recaptcha-response": captchaToken,
+          language: this.isDE() ? "de" : "en",
+          page_url: window.location.href,
+          time: new Date().toLocaleString(this.isDE() ? "de-DE" : "en-GB")
+        }
+      })
+    })
+      .then((response) => {
+        if (response.ok) return;
+        return response.text().then((text) => { throw new Error(text || "EmailJS request failed"); });
+      })
+      .then(() => this.setState({ sent: true, sending: false }))
+      .catch((error) => {
+        console.error("EmailJS send failed:", error);
+        if (window.grecaptcha) window.grecaptcha.reset();
+        this.setState({
+          sending: false,
+          sendError: "The message could not be sent. Please try again or email me directly."
+        });
+      });
+  }
+
   calcVals() {
     const c = this.state.calc;
     const de = this.isDE();
@@ -746,15 +801,19 @@ class Component extends DCLogic {
       bd: bd,
       sent: this.state.sent,
       showForm: !this.state.sent,
+      sending: this.state.sending ? "true" : "false",
+      sendError: this.state.sendError,
+      sendLabel: this.state.sending ? "Sending…" : "Send",
       consent: this.state.consent,
       consentError: this.state.consentError,
+      captchaError: this.state.captchaError,
       consentDescribedBy: this.state.consentError ? "consent-error" : undefined,
       cbBorder: this.state.consent ? accent : "#E5E7EB",
       cbBg: this.state.consent ? accent : "#FFFFFF",
       cbMark: this.state.consent ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8.5 L6.2 11.7 L13 4.9'/%3E%3C/svg%3E\")" : "none",
-      sendDisabled: !this.state.consent,
-      sendCursor: this.state.consent ? "pointer" : "not-allowed",
-      sendOpacity: this.state.consent ? 1 : 0.45,
+      sendDisabled: !this.state.consent || this.state.sending,
+      sendCursor: this.state.consent && !this.state.sending ? "pointer" : "not-allowed",
+      sendOpacity: this.state.consent && !this.state.sending ? 1 : 0.45,
       toggleConsent: (e) => this.setState({ consent: e.target.checked, consentError: e.target.checked ? false : this.state.consentError }),
       setName: this.set("name"),
       setEmail: this.set("email"),
@@ -763,8 +822,10 @@ class Component extends DCLogic {
       onSubmit: (e) => {
         e.preventDefault();
         if (!this.state.consent) { this.setState({ consentError: true }); return; }
+        const captchaToken = window.grecaptcha ? window.grecaptcha.getResponse() : "";
+        if (!captchaToken) { this.setState({ captchaError: true }); return; }
         this.setState({ touched: true }, () => {
-          if (Object.keys(this.errors()).length === 0) this.setState({ sent: true });
+          if (Object.keys(this.errors()).length === 0) this.sendEmail(captchaToken);
         });
       },
     };
